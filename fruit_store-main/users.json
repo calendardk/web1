@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@eldenfruits.com",
+      "password": "admin123",
+      "phone": "0901234567",
+      "role": "admin",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "avatar": "image/avatar-admin.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Văn A",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "phone": "0912345678",
+      "role": "user",
+      "createdAt": "2025-01-02T10:30:00Z",
+      "avatar": "image/avatar-default.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ORD001",
+      "userId": 2,
+      "userName": "Nguyễn Văn A",
+      "items": [
+        {
+          "productId": 1,
+          "name": "Cherry Đỏ Mỹ Size 9.5",
+          "quantity": 2,
+          "price": 399000
+        }
+      ],
+      "total": 798000,
+      "status": "completed",
+      "orderDate": "2025-01-01T14:30:00Z"
+    },
+    {
+      "orderId": "ORD002",
+      "userId": 2,
+      "userName": "Nguyễn Văn A",
+      "items": [
+        {
+          "productId": 5,
+          "name": "Nho Đỏ Kẹo Candy Snaps Úc",
+          "quantity": 1,
+          "price": 398000
+        }
+      ],
+      "total": 398000,
+      "status": "pending",
+      "orderDate": "2025-01-02T09:15:00Z"
+    }
+  ]
+}

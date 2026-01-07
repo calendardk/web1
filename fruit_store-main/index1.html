@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Fruits - Trái Cây Nhập Khẩu Cao Cấp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/main.js"></script>
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 1900 69 69 69</span>
+                <span><i class="fas fa-envelope"></i> hieptrumtoantin@gmail.com.vn</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <a href="#" class="logo">Clean <span>Fruits</span></a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm trái cây, giỏ quà...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="item">
+                    <i class="fas fa-user"></i>
+                    <div>Đăng nhập/Đăng kí</div>
+                    <div>Tài khoản của tôi</div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-shopping-basket"></i>
+                    <div>Giỏ hàng (0)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">Chương trình khuyến mãi</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Sản phẩm <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Best seller</a></li>
+                        <li><a href="#">Trái cây đang mùa</a></li>
+                        <li><a href="#">Cherry nhập khẩu</a></li>
+                        <li><a href="#">Nho nhập khẩu</a></li>
+                        <li><a href="#">Táo nhập khẩu</a></li>
+                        <li><a href="#">Dâu tây, việt quất</a></li>
+                        <li><a href="#">Trái cây Việt Nam</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Giỏ quà tặng</a></li>
+                <li><a href="#">Trái cây cắt sẵn</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/slide1.avif" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide3.webp" alt="">
+            </div>
+        </div>
+
+        <!-- Nút điều hướng -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <!-- Chấm tròn -->
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        var index = 0;
+
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            dots.forEach(dot => dot.classList.remove("active"));
+
+            slides[i].classList.add("active");
+            dots[i].classList.add("active");
+        }
+
+        nextBtn.onclick = () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        };
+
+        prevBtn.onclick = () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        };
+
+        dots.forEach((dot, i) => {
+            dot.onclick = () => {
+                index = i;
+                showSlide(index);
+            };
+        });
+
+        // Tự động chạy
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }, 5000);
+    </script>
+
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Flash Sale</h2>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('flash-sale-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="flash-sale-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('flash-sale-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="flash-sale.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Sản Phẩm Bán Chạy</h2>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('best-seller-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="best-seller-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('best-seller-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="best-seller.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Giỏ Quà Biếu Tặng</h2>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('gift-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="gift-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('gift-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="gift.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Trái cây cắt sẵn</h2>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('cut-fruit-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="cut-fruit-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('cut-fruit-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="cut-fruit.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Về Clean Fruits</h3>
+                    <p>Hệ thống trái cây nhập khẩu uy tín hàng đầu Việt Nam. Cam kết chất lượng và nguồn gốc xuất xứ rõ
+                        ràng.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hỗ Trợ Khách Hàng</h3>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+                        <li><i class="fas fa-phone"></i> 1900 69 69 69</li>
+                        <li><i class="fas fa-envelope"></i> hieptrumtoantin.com.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Clean Fruits. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="js/user-manager.js"></script>
+    <script src="js/cart-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

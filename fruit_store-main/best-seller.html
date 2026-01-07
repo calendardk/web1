@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Seller - Elden Fruits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/best-seller.css">
+    <script src="/js/cart-manager.js"></script>
+    <script src="js/best-seller.js"></script>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 1900 69 69 69</span>
+                <span><i class="fas fa-envelope"></i> hunn1302@gmail.com</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/nhuhungu/?locale=vi_VN" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Main -->
+    <div class="header-main">
+        <div class="container">
+            <a href="index.html" class="logo">Elden <span>Fruits</span></a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm trái cây, giỏ quà...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="item">
+                    <i class="fas fa-user"></i>
+                    <div id="user-account" style="line-height: 1.4;">
+                        <a href="auth.html" style="color: inherit; text-decoration: none; font-weight: bold;">Đăng
+                            nhập/Đăng kí</a>
+                        <div style="font-size: 13px;">Tài khoản của tôi</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="cart.html">
+                        <div id="cart-count">Giỏ hàng (0)</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="flash-sale.html">Chương trình khuyến mãi</a></li>
+                <li class="has-dropdown">
+                    <a href="all-products.html">Sản phẩm <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="best-seller.html">Best seller</a></li>
+                        <li><a href="all-products.html?category=dang-mua">Trái cây đang mùa</a></li>
+                        <li><a href="all-products.html?category=cherry">Cherry nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=nho">Nho nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=tao">Táo nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=kiwi">Kiwi</a></li>
+                        <li><a href="all-products.html?category=viet-nam">Trái cây Việt Nam</a></li>
+                    </ul>
+                </li>
+                <li><a href="gift.html">Giỏ quà tặng</a></li>
+                <li><a href="cut-fruit.html">Trái cây cắt sẵn</a></li>
+                <li><a href="#">Khám phá Elden</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">Best Seller</h1>
+        <p class="page-subtitle">Sản phẩm bán chạy được yêu thích nhất</p>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="container">
+        <div class="filter-section">
+            <div class="filter-item">
+                <label for="category-filter">Danh mục:</label>
+                <select id="category-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="imported">Trái cây nhập khẩu</option>
+                    <option value="local">Trái cây Việt Nam</option>
+                    <option value="premium">Trái cây cao cấp</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="price-filter">Mức giá:</label>
+                <select id="price-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="under-100k">Dưới 100k</option>
+                    <option value="100k-200k">100k - 200k</option>
+                    <option value="200k-500k">200k - 500k</option>
+                    <option value="above-500k">Trên 500k</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="sort-filter">Sắp xếp:</label>
+                <select id="sort-filter">
+                    <option value="popular">Phổ biến nhất</option>
+                    <option value="price-asc">Giá: Thấp đến cao</option>
+                    <option value="price-desc">Giá: Cao đến thấp</option>
+                    <option value="name-asc">Tên: A-Z</option>
+                    <option value="name-desc">Tên: Z-A</option>
+                </select>
+            </div>
+            <div class="product-count" id="product-count">
+                <!-- Sẽ được cập nhật bởi JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container">
+        <div class="products-section">
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="cart-notification"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Về Elden Fruits</h3>
+                    <p>Hệ thống trái cây nhập khẩu uy tín hàng đầu Việt Nam. Cam kết chất lượng và nguồn gốc xuất xứ
+                        rõ ràng.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hỗ Trợ Khách Hàng</h3>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+                        <li><i class="fas fa-phone"></i> 1900 69 69 69</li>
+                        <li><i class="fas fa-envelope"></i> hieptrumtoantin.com.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Elden Fruits. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="js/user-manager.js"></script>
+    <script src="js/cart-manager.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+</body>
+
+</html>

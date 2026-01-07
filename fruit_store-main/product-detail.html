@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - Clean Fruits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .breadcrumb {
+            padding: 20px 0;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .product-detail-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .detail-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .detail-info h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .detail-price {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .detail-price .old {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .product-meta {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .product-meta strong {
+            color: #333;
+        }
+
+        .detail-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background: none;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn-add-main {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-add-main:hover {
+            background: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script defer src="js/cart-manager.js"></script>
+    <script defer src="js/product-detail.js"></script>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 1900 69 69 69</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <a href="index.html" class="logo">Elden <span>Fruits</span></a>
+            <div class="header-actions">
+                <div class="item">
+                    <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="cart.html">
+                        <div id="cart-count">Giỏ hàng (0)</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a> / <span id="breadcrumb-name">Đang tải...</span>
+        </div>
+
+        <div id="product-detail-container" class="product-detail-wrapper">
+            <p>Đang tải thông tin sản phẩm...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">&copy; 2025 Elden Fruits.</div>
+        </div>
+    </footer>
+    <script src="js/user-manager.js"></script>
+    <script src="js/cart-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

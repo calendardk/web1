@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Elden Fruits</title>
+    <style>
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+        }
+
+        .auth-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 40px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            /* Quan trọng để không bị vỡ layout */
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #43a047;
+        }
+
+        .toggle-auth {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .toggle-auth a {
+            color: #4CAF50;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+        <div id="login-container">
+            <div class="auth-header">
+                <span class="logo">🍎</span>
+                <h2>Đăng Nhập</h2>
+                <p>Chào mừng quay trở lại!</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" id="loginUser" placeholder="Ví dụ: admin" required>
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="loginPass" placeholder="Nhập mật khẩu..." required>
+                </div>
+                <div id="loginError" class="error-msg"></div>
+                <button type="submit" class="btn-submit">Đăng Nhập</button>
+            </form>
+            <div class="toggle-auth">
+                Chưa có tài khoản? <a onclick="showRegister()">Đăng ký ngay</a>
+            </div>
+        </div>
+
+        <div id="register-container" class="hidden">
+            <div class="auth-header">
+                <span class="logo">📝</span>
+                <h2>Đăng Ký</h2>
+                <p>Tạo tài khoản mới</p>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>Họ và tên</label>
+                    <input type="text" id="regName" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" id="regUser" placeholder="Viết liền không dấu" required>
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" id="regPhone" placeholder="09xxx..." required>
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="regPass" required>
+                </div>
+                <div class="form-group">
+                    <label>Nhập lại mật khẩu</label>
+                    <input type="password" id="regPassConfirm" required>
+                </div>
+                <div id="regError" class="error-msg"></div>
+                <button type="submit" class="btn-submit" style="background: #2196F3;">Đăng Ký</button>
+            </form>
+            <div class="toggle-auth">
+                Đã có tài khoản? <a onclick="showLogin()">Quay lại đăng nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/user-manager.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

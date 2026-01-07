@@ -1,0 +1,462 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cherry Đỏ Mỹ Size 9.5",
+      "image": "image/cherry-do-my.jpg",
+      "newPrice": "399.000₫",
+      "oldPrice": "450.000₫",
+      "category": "cherry",
+      "tags": ["flash-sale", "best-seller"],
+      "origin": "Mỹ"
+    },
+    {
+      "id": 2,
+      "name": "Nho Sữa Hàn Quốc Vip",
+      "image": "image/nho-sua-han-quoc.jpg",
+      "newPrice": "999.000₫",
+      "oldPrice": "1.200.000₫",
+      "category": "nho",
+      "tags": ["flash-sale"],
+      "origin": "Hàn Quốc"
+    },
+    {
+      "id": 3,
+      "name": "Táo Envy Mỹ Size Lớn",
+      "image": "image/tao-envy-my.jpg",
+      "newPrice": "199.000₫",
+      "oldPrice": "250.000₫",
+      "category": "tao",
+      "tags": ["flash-sale", "cut-fruit"],
+      "origin": "Mỹ"
+    },
+    {
+      "id": 4,
+      "name": "Cam Vàng Navel Úc",
+      "image": "image/cam-vang-navel.jpg",
+      "newPrice": "99.000₫",
+      "oldPrice": "120.000₫",
+      "category": "dang-mua",
+      "tags": ["flash-sale"],
+      "origin": "Úc"
+    },
+    {
+      "id": 5,
+      "name": "Nho Đỏ Kẹo Candy Snaps Úc",
+      "image": "image/nho-do-keo.jpg",
+      "price": "398.000₫ /kg",
+      "category": "nho",
+      "tags": ["best-seller"],
+      "origin": "Úc"
+    },
+    {
+      "id": 6,
+      "name": "Cherry New Zealand Size 28",
+      "image": "image/cherry-nz.jpg",
+      "price": "479.000₫ /kg",
+      "category": "cherry",
+      "tags": ["best-seller"],
+      "origin": "New Zealand"
+    },
+    {
+      "id": 7,
+      "name": "Táo Fuji Nhật Bản",
+      "image": "image/tao-fuji.jpg",
+      "price": "189.000₫ /kg",
+      "category": "tao",
+      "tags": ["best-seller"],
+      "origin": "Nhật Bản"
+    },
+    {
+      "id": 8,
+      "name": "Cam Cara Cara Mỹ",
+      "image": "image/cam-cara.jpg",
+      "price": "129.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["best-seller"],
+      "origin": "Mỹ"
+    },
+    {
+      "id": 9,
+      "name": "Giỏ Quà Thịnh Vượng",
+      "image": "image/gio-qua-thinh-vuong.jpg",
+      "price": "2.200.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 10,
+      "name": "Giỏ Quà Như Ý",
+      "image": "image/gio-qua-nhu-y.jpg",
+      "price": "1.500.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 11,
+      "name": "Giỏ Quà Sức Khỏe",
+      "image": "image/gio-qua-suc-khoe.jpg",
+      "price": "850.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 12,
+      "name": "Hộp Quà Cherry Cao Cấp",
+      "image": "image/hop-qua-cherry.jpg",
+      "price": "950.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 13,
+      "name": "Hộp Trái Cây Cắt Sẵn Mix 1",
+      "image": "image/cut-fruit-mix-1.jpg",
+      "price": "79.000₫",
+      "category": "cat-san",
+      "tags": ["cut-fruit"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 14,
+      "name": "Hộp Trái Cây Cắt Sẵn Mix 2",
+      "image": "image/cut-fruit-mix-2.jpg",
+      "price": "99.000₫",
+      "category": "cat-san",
+      "tags": ["cut-fruit"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 15,
+      "name": "Hộp Trái Cây Cắt Sẵn Detox",
+      "image": "image/cut-fruit-detox.jpg",
+      "price": "109.000₫",
+      "category": "cat-san",
+      "tags": ["cut-fruit"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 16,
+      "name": "Kiwi Vàng New Zealand",
+      "image": "image/kiwi-vang.jpg",
+      "price": "229.000₫ /kg",
+      "category": "kiwi",
+      "tags": ["product"],
+      "origin": "New Zealand"
+    },
+    {
+      "id": 17,
+      "name": "Việt Quất Mỹ",
+      "image": "image/viet-quat.jpg",
+      "price": "349.000₫ /hộp",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Mỹ"
+    },
+    {
+      "id": 18,
+      "name": "Dâu Tây Hàn Quốc",
+      "image": "image/dau-tay-han.jpg",
+      "price": "299.000₫ /hộp",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Hàn Quốc"
+    },
+    {
+      "id": 19,
+      "name": "Lê Hàn Quốc",
+      "image": "image/le-han-quoc.jpg",
+      "price": "159.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Hàn Quốc"
+    },
+    {
+      "id": 20,
+      "name": "Chuối Dole Philippines",
+      "image": "image/chuoi-dole.jpg",
+      "price": "39.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Philippines"
+    },
+    {
+      "id": 21,
+      "name": "Chuối Dole Philippines (Sale)",
+      "image": "image/chuoi-dole-sale.jpg",
+      "newPrice": "39.000₫",
+      "oldPrice": "50.000₫",
+      "category": "dang-mua",
+      "tags": ["flash-sale"],
+      "origin": "Philippines"
+    },
+    {
+      "id": 22,
+      "name": "Hộp Quà Cherry Đặc Biệt",
+      "image": "image/hop-qua-cherry-special.jpg",
+      "price": "950.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 23,
+      "name": "Nước Ép Cam Tươi",
+      "image": "image/nuoc-ep-cam.jpg",
+      "price": "45.000₫",
+      "category": "do-uong",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 24,
+      "name": "Smoothie Bơ",
+      "image": "image/smoothie-bo.jpg",
+      "price": "55.000₫",
+      "category": "do-uong",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 25,
+      "name": "Dưa Lưới Taki Nhật Bản",
+      "image": "image/dua-luoi-taki.jpg",
+      "price": "1.200.000₫ /quả",
+      "category": "dang-mua",
+      "tags": ["best-seller"],
+      "origin": "Nhật Bản"
+    },
+    {
+      "id": 26,
+      "name": "Xoài Cát Chu Cao Lãnh",
+      "image": "image/xoai-cat-chu.jpg",
+      "newPrice": "65.000₫",
+      "oldPrice": "80.000₫",
+      "category": "viet-nam",
+      "tags": ["flash-sale"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 27,
+      "name": "Măng Cụt Thái Lan",
+      "image": "image/mang-cut-thai.jpg",
+      "price": "110.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Thái Lan"
+    },
+    {
+      "id": 28,
+      "name": "Sầu Riêng Musang King",
+      "image": "image/sau-rieng-musang.jpg",
+      "price": "550.000₫ /hộp",
+      "category": "dang-mua",
+      "tags": ["best-seller"],
+      "origin": "Malaysia"
+    },
+    {
+      "id": 29,
+      "name": "Lựu Đỏ Peru Size Lớn",
+      "image": "image/luu-do-peru.jpg",
+      "price": "280.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Peru"
+    },
+    {
+      "id": 30,
+      "name": "Hồng Giòn Fuyu",
+      "image": "image/hong-gion-fuyu.jpg",
+      "newPrice": "199.000₫",
+      "oldPrice": "240.000₫",
+      "category": "dang-mua",
+      "tags": ["flash-sale"],
+      "origin": "Nhật Bản"
+    },
+    {
+      "id": 31,
+      "name": "Dừa Xiêm Bến Tre",
+      "image": "image/dua-xiem.jpg",
+      "price": "20.000₫ /quả",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 32,
+      "name": "Bưởi Da Xanh Loại 1",
+      "image": "image/buoi-da-xanh.jpg",
+      "price": "75.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 33,
+      "name": "Na Dai Đài Loan",
+      "image": "image/na-dai-loan.jpg",
+      "price": "350.000₫ /thùng",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Đài Loan"
+    },
+    {
+      "id": 34,
+      "name": "Quýt Úc Ngọt Đậm",
+      "image": "image/quyt-uc.jpg",
+      "price": "160.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Úc"
+    },
+    {
+      "id": 35,
+      "name": "Chanh Dây Ngọt Colombia",
+      "image": "image/chanh-day-colombia.jpg",
+      "price": "290.000₫ /kg",
+      "category": "dang-mua",
+      "tags": ["product"],
+      "origin": "Colombia"
+    },
+    {
+      "id": 36,
+      "name": "Dâu Tây Bạch Tuyết",
+      "image": "image/dau-bach-tuyet.jpg",
+      "newPrice": "890.000₫",
+      "oldPrice": "1.000.000₫",
+      "category": "dang-mua",
+      "tags": ["flash-sale"],
+      "origin": "Nhật Bản"
+    },
+    {
+      "id": 37,
+      "name": "Set Quà Tứ Quý",
+      "image": "image/set-qua-tu-quy.jpg",
+      "price": "1.800.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 38,
+      "name": "Set Quà An Khang",
+      "image": "image/set-qua-an-khang.jpg",
+      "price": "1.250.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 39,
+      "name": "Hộp Quà Mix Trái Cây",
+      "image": "image/hop-qua-mix.jpg",
+      "price": "600.000₫",
+      "category": "gift-card",
+      "tags": ["gift"],
+      "origin": "Đa quốc gia"
+    },
+    {
+      "id": 40,
+      "name": "Nước Ép Táo Cà Rốt",
+      "image": "image/nuoc-ep-tao-ca-rot.jpg",
+      "price": "50.000₫",
+      "category": "do-uong",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 41,
+      "name": "Nước Ép Dưa Hấu",
+      "image": "image/nuoc-ep-dua-hau.jpg",
+      "price": "40.000₫",
+      "category": "do-uong",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 42,
+      "name": "Sinh Tố Xoài Chanh Dây",
+      "image": "image/sinh-to-xoai.jpg",
+      "price": "60.000₫",
+      "category": "do-uong",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 43,
+      "name": "Dưa Hấu Không Hạt Cắt Sẵn",
+      "image": "image/dua-hau-cat-san.jpg",
+      "price": "45.000₫",
+      "category": "cat-san",
+      "tags": ["cut-fruit"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 44,
+      "name": "Bưởi Năm Roi Tách Múi",
+      "image": "image/buoi-tach-mui.jpg",
+      "price": "65.000₫",
+      "category": "cat-san",
+      "tags": ["cut-fruit"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 45,
+      "name": "Ổi Nữ Hoàng",
+      "image": "image/oi-nu-hoang.jpg",
+      "price": "30.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 46,
+      "name": "Thanh Long Ruột Đỏ",
+      "image": "image/thanh-long-do.jpg",
+      "price": "40.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 47,
+      "name": "Mận An Phước",
+      "image": "image/man-an-phuoc.jpg",
+      "price": "55.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 48,
+      "name": "Nhãn Lồng Hưng Yên",
+      "image": "image/nhan-long.jpg",
+      "price": "70.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 49,
+      "name": "Vải Thiều Lục Ngạn",
+      "image": "image/vai-thieu.jpg",
+      "price": "60.000₫ /kg",
+      "category": "viet-nam",
+      "tags": ["product"],
+      "origin": "Việt Nam"
+    },
+    {
+      "id": 50,
+      "name": "Combo Detox 7 Ngày",
+      "image": "image/combo-detox.jpg",
+      "price": "599.000₫",
+      "category": "do-uong",
+      "tags": ["best-seller"],
+      "origin": "Việt Nam"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Fruits - Trái Cây Nhập Khẩu Cao Cấp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script defer src="js/cart-manager.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 1900 69 69 69</span>
+                <span><i class="fas fa-envelope"></i> hunn1302@gmail.com</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/nhuhungu/?locale=vi_VN" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <a href="index.html" class="logo">Elden <span>Fruits</span></a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm trái cây, giỏ quà...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="item">
+                    <i class="fas fa-user"></i>
+                    <div id="user-account" style="line-height: 1.4;">
+                        <a href="auth.html" style="color: inherit; text-decoration: none; font-weight: bold;">Đăng nhập/Đăng kí</a>
+                        <div style="font-size: 13px;">Tài khoản của tôi</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="cart.html"><div id="cart-count">Giỏ hàng (0)</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="flash-sale.html">Chương trình khuyến mãi</a></li>
+                <li class="has-dropdown">
+                    <a href="all-products.html">Sản phẩm <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="best-seller.html">Best seller</a></li>
+                        <li><a href="all-products.html?category=dang-mua">Trái cây đang mùa</a></li>
+                        <li><a href="all-products.html?category=cherry">Cherry nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=nho">Nho nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=tao">Táo nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=kiwi">Kiwi</a></li>
+                        <li><a href="all-products.html?category=viet-nam">Trái cây Việt Nam</a></li>
+                    </ul>
+                </li>
+                <li><a href="gift.html">Giỏ quà tặng</a></li>
+                <li><a href="cut-fruit.html">Trái cây cắt sẵn</a></li>
+                <li><a href="#">Khám phá Elden</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/slide1.avif" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide3.webp" alt="">
+            </div>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        var index = 0;
+
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            dots.forEach(dot => dot.classList.remove("active"));
+
+            slides[i].classList.add("active");
+            dots[i].classList.add("active");
+        }
+
+        nextBtn.onclick = () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        };
+
+        prevBtn.onclick = () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        };
+
+        dots.forEach((dot, i) => {
+            dot.onclick = () => {
+                index = i;
+                showSlide(index);
+            };
+        });
+
+        // Tự động chạy
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }, 5000);
+    </script>
+
+
+    <div class="section-wrapper">
+        <div class="section-title">
+            <a href="flash-sale.html"><h2>Flash Sale</h2></a>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('flash-sale-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="flash-sale-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('flash-sale-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="flash-sale.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="category-section">
+            <div class="section-header">
+                <div class="section-title"><a href="all-products.html">SẢN PHẨM</a></div>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" data-category="dang-mua">
+                    <div class="icon-container">🍊</div>
+                    <div class="category-name">Trái Cây Đang Mùa</div>
+                </div>
+
+                <div class="category-card" data-category="cherry">
+                    <div class="icon-container">🍒</div>
+                    <div class="category-name">Cherry Nhập Khẩu</div>
+                </div>
+
+                <div class="category-card" data-category="nho">
+                    <div class="icon-container">🍇</div>
+                    <div class="category-name">Nho Nhập Khẩu</div>
+                </div>
+
+                <div class="category-card" data-category="tao">
+                    <div class="icon-container">🍎</div>
+                    <div class="category-name">Táo Nhập Khẩu</div>
+                </div>
+
+                <div class="category-card" data-category="kiwi">
+                    <div class="icon-container">🥝</div>
+                    <div class="category-name">Kiwi</div>
+                </div>
+
+                <div class="category-card" data-category="viet-nam">
+                    <div class="icon-container">🍌</div>
+                    <div class="category-name">Trái cây Việt Nam</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript để xử lý click vào category
+        const categoryCards = document.querySelectorAll('.category-card');
+
+        categoryCards.forEach(card => {
+            card.addEventListener('click', function () {
+                // Bỏ active khỏi tất cả các card
+                categoryCards.forEach(c => c.classList.remove('active'));
+
+                // Thêm active vào card được click
+                this.classList.add('active');
+
+                // Lấy category đã chọn
+                const category = this.dataset.category;
+                console.log('Đã chọn category:', category);
+                // Chuyển hướng
+                window.location.href = `all-products.html?category=${category}`;
+            });
+        });
+
+        // Thêm hiệu ứng ripple khi click
+        categoryCards.forEach(card => {
+            card.addEventListener('click', function (e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.5);
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                    animation: ripple 0.6s ease-out;
+                `;
+
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // CSS cho ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                from {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <div class="section-wrapper">
+        <div class="section-title">
+            <a href="best-seller.html"><h2>Sản Phẩm Bán Chạy</h2></a>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('best-seller-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="best-seller-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('best-seller-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="best-seller.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+    </div>
+
+    <div class="section-wrapper">
+        <div class="section-title">
+            <a href="gift.html"><h2>Giỏ Quà Biếu Tặng</h2></a>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('gift-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="gift-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('gift-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="gift.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+    </div>
+
+    <div class="section-wrapper">
+        <div class="section-title">
+            <a href="cut-fruit.html"><h2>Trái cây cắt sẵn</h2></a>
+        </div>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev" onclick="scrollSlider('cut-fruit-list', -1)"><i
+                    class="fas fa-chevron-left"></i></button>
+            <div class="product-grid slider-container" id="cut-fruit-list"></div>
+            <button class="slider-btn next" onclick="scrollSlider('cut-fruit-list', 1)"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-wrapper">
+            <a href="cut-fruit.html" class="btn-view-all">Xem tất cả</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Về Elden Fruits</h3>
+                    <p>Hệ thống trái cây nhập khẩu uy tín hàng đầu Việt Nam. Cam kết chất lượng và nguồn gốc xuất xứ rõ
+                        ràng.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hỗ Trợ Khách Hàng</h3>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+                        <li><i class="fas fa-phone"></i> 1900 69 69 69</li>
+                        <li><i class="fas fa-envelope"></i> hieptrumtoantin.com.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Elden Fruits. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/user-manager.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Kiểm tra UserManager
+            if(typeof UserManager !== 'undefined') {
+                const currentUser = UserManager.getCurrentUser();
+                const userArea = document.getElementById('user-account');
+
+                if (currentUser && userArea) {
+                    // Nếu ĐÃ ĐĂNG NHẬP -> Đổi chữ Đăng nhập thành Tên User + Link Đơn hàng
+                    userArea.innerHTML = `
+                        <div style="font-weight: bold; color: #4CAF50;">
+                            Chào, ${currentUser.fullName || currentUser.username}
+                        </div>
+                        <div style="font-size: 13px;">
+                            <a href="my-orders.html" style="color: #333; text-decoration: none;">📦 Đơn mua</a>
+                            <span style="margin:0 5px">|</span>
+                            <a href="#" onclick="UserManager.logout()" style="color: red; text-decoration: none;">Thoát</a>
+                        </div>
+                    `;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Elden Fruits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 1900 69 69 69</span>
+                <span><i class="fas fa-envelope"></i> hunn1302@gmail.com</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/nhuhungu/?locale=vi_VN" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <a href="index.html" class="logo">Elden <span>Fruits</span></a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm trái cây, giỏ quà...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="item">
+                    <i class="fas fa-user"></i>
+                    <div><a href="auth.html" style="color: inherit; text-decoration: none;">Đăng nhập/Đăng kí</a></div>
+                </div>
+                <div class="item">
+                    <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="cart.html">
+                        <div id="cart-count">Giỏ hàng (0)</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="flash-sale.html">Chương trình khuyến mãi</a></li>
+                <li class="has-dropdown">
+                    <a href="all-products.html">Sản phẩm <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="best-seller.html">Best seller</a></li>
+                        <li><a href="all-products.html?category=dang-mua">Trái cây đang mùa</a></li>
+                        <li><a href="all-products.html?category=cherry">Cherry nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=nho">Nho nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=tao">Táo nhập khẩu</a></li>
+                        <li><a href="all-products.html?category=kiwi">Kiwi</a></li>
+                        <li><a href="all-products.html?category=viet-nam">Trái cây Việt Nam</a></li>
+                    </ul>
+                </li>
+                <li><a href="gift.html">Giỏ quà tặng</a></li>
+                <li><a href="cut-fruit.html">Trái cây cắt sẵn</a></li>
+                <li><a href="#">Khám phá Elden</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1 class="page-title">Giỏ Hàng Của Bạn</h1>
+        <p class="page-subtitle">Quản lý sản phẩm và hoàn tất đơn hàng</p>
+    </div>
+
+    <div class="container">
+        <div class="cart-wrapper">
+            <div class="cart-items-section">
+                <div class="cart-header">
+                    <h2>Sản phẩm trong giỏ (<span id="total-items">0</span>)</h2>
+                    <button class="btn-clear-cart" onclick="confirmClearCart()">
+                        <i class="fas fa-trash-alt"></i> Xóa tất cả
+                    </button>
+                </div>
+
+                <div id="cart-items-container">
+                </div>
+
+                <div class="continue-shopping">
+                    <a href="index.html" class="btn-continue">
+                        <i class="fas fa-arrow-left"></i> Tiếp tục mua sắm
+                    </a>
+                </div>
+            </div>
+
+            <div class="cart-summary-section">
+                <div class="summary-card">
+                    <h3>Tóm tắt đơn hàng</h3>
+
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0₫</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="shipping-fee">Miễn phí</span>
+                    </div>
+
+                    <div class="summary-row discount-row">
+                        <span>Giảm giá:</span>
+                        <span id="discount">0₫</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total-row">
+                        <span>Tổng cộng:</span>
+                        <span id="total">0₫</span>
+                    </div>
+
+                    <div class="promo-code">
+                        <input type="text" id="promo-input" placeholder="Mã: ELDEN">
+                        <button class="btn-apply-promo" onclick="applyPromoCode()">Áp dụng</button>
+                    </div>
+
+                    <button class="btn-checkout" onclick="checkout()">
+                        <i class="fas fa-shopping-bag"></i> ĐẶT HÀNG
+                    </button>
+
+                    <div class="payment-methods">
+                        <p>Chúng tôi chấp nhận:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 Elden Fruits. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/user-manager.js"></script>
+    <script src="js/cart-manager.js"></script>
+    <script src="js/order-manager.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
